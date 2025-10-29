@@ -4,74 +4,55 @@
 
 /* LIGHT MODE */
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
+  /* Visual tokens for Iwajoo — white / blue / black palette */
+  --button-outline: rgba(0, 0, 0, .10);
+  --badge-outline: rgba(0, 0, 0, .05);
 
-  /* Automatic computation of border around primary / danger buttons */
-  --opaque-button-border-intensity: -8; /* In terms of percentages */
+  --opaque-button-border-intensity: -8;
+  /* In terms of percentages */
 
-  /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --elevate-1: rgba(0, 0, 0, .03);
+  --elevate-2: rgba(0, 0, 0, .08);
 
-  --background: 220 5% 96%;
+  /* Core colours */
+  --background: 0 0% 100%;
+  /* white */
+  --foreground: 220 10% 8%;
+  /* near-black for text */
+  --border: 220 8% 92%;
 
-  --foreground: 220 10% 10%;
+  /* Cards / surfaces */
+  --card: 0 0% 100%;
+  --card-foreground: 220 12% 10%;
+  --card-border: 220 8% 90%;
 
-  --border: 220 8% 88%;
+  /* Sidebar (if used) */
+  --sidebar: 220 6% 98%;
+  --sidebar-foreground: 220 12% 10%;
+  --sidebar-border: 220 8% 92%;
 
-  --card: 220 6% 94%;
-
-  --card-foreground: 220 10% 12%;
-
-  --card-border: 220 8% 86%;
-
-  --sidebar: 220 6% 92%;
-
-  --sidebar-foreground: 220 10% 12%;
-
-  --sidebar-border: 220 8% 84%;
-
-  --sidebar-primary: 217 91% 60%;
-
-  --sidebar-primary-foreground: 220 5% 98%;
-
-  --sidebar-accent: 220 12% 88%;
-
-  --sidebar-accent-foreground: 220 10% 20%;
-
-  --sidebar-ring: 217 91% 60%;
-
-  --popover: 220 8% 90%;
-
-  --popover-foreground: 220 10% 12%;
-
-  --popover-border: 220 8% 82%;
-
-  --primary: 217 91% 60%;
-
+  /* Primary brand blue and accents */
+  --primary: 214 100% 42%;
+  /* vivid Iwajoo blue */
   --primary-foreground: 220 5% 98%;
+  --accent: 215 90% 28%;
+  /* darker blue accent */
+  --accent-foreground: 0 0% 100%;
 
-  --secondary: 220 12% 86%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 10% 30%;
 
-  --secondary-foreground: 220 10% 15%;
-
-  --muted: 220 10% 88%;
-
-  --muted-foreground: 220 10% 35%;
-
-  --accent: 280 70% 90%;
-
-  --accent-foreground: 280 70% 25%;
+  --muted: 220 10% 96%;
+  --muted-foreground: 220 10% 45%;
 
   --destructive: 0 84% 50%;
+  --destructive-foreground: 0 0% 100%;
 
-  --destructive-foreground: 0 5% 98%;
+  --input: 220 10% 95%;
+  --ring: 214 100% 42%;
 
-  --input: 220 10% 75%;
-  --ring: 217 91% 60%;
-  --chart-1: 217 91% 45%;
-  --chart-2: 280 70% 50%;
+  --chart-1: 214 100% 42%;
+  --chart-2: 215 90% 30%;
   --chart-3: 142 76% 40%;
   --chart-4: 38 92% 45%;
   --chart-5: 200 80% 45%;
@@ -79,58 +60,38 @@
   --font-sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: 'JetBrains Mono', Menlo, monospace;
-  --radius: .5rem; /* 8px */
-  --shadow-2xs: 0px 1px 2px 0px hsl(220 10% 10% / 0.05);
-  --shadow-xs: 0px 1px 3px 0px hsl(220 10% 10% / 0.08);
-  --shadow-sm: 0px 2px 4px 0px hsl(220 10% 10% / 0.06), 0px 1px 2px -1px hsl(220 10% 10% / 0.04);
-  --shadow: 0px 4px 6px 0px hsl(220 10% 10% / 0.07), 0px 2px 4px -1px hsl(220 10% 10% / 0.05);
-  --shadow-md: 0px 6px 12px 0px hsl(220 10% 10% / 0.08), 0px 2px 6px -2px hsl(220 10% 10% / 0.05);
-  --shadow-lg: 0px 10px 20px 0px hsl(220 10% 10% / 0.10), 0px 4px 8px -2px hsl(220 10% 10% / 0.06);
-  --shadow-xl: 0px 20px 30px 0px hsl(220 10% 10% / 0.12), 0px 8px 12px -4px hsl(220 10% 10% / 0.08);
-  --shadow-2xl: 0px 30px 50px 0px hsl(220 10% 10% / 0.15);
+  --radius: .5rem;
+  /* 8px */
+
+  --shadow-2xs: 0px 1px 2px 0px hsl(220 10% 8% / 0.04);
+  --shadow-xs: 0px 1px 3px 0px hsl(220 10% 8% / 0.06);
+  --shadow-sm: 0px 2px 4px 0px hsl(220 10% 8% / 0.07), 0px 1px 2px -1px hsl(220 10% 8% / 0.04);
+  --shadow: 0px 6px 16px 0px hsl(220 10% 8% / 0.08), 0px 2px 6px -2px hsl(220 10% 8% / 0.05);
+  --shadow-md: 0px 8px 24px 0px hsl(220 10% 8% / 0.09);
+
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
-  /* Automatically computed borders - intensity can be controlled by the user by the --opaque-button-border-intensity setting */
-
-  /* Fallback for older browsers */
-  --sidebar-primary-border: hsl(var(--sidebar-primary));
-  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
-  --sidebar-accent-border: hsl(var(--sidebar-accent));
-  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
+  /* Fallbacks / computed borders */
+  --sidebar-primary-border: hsl(var(--primary));
+  --sidebar-accent-border: hsl(var(--accent));
   --primary-border: hsl(var(--primary));
-  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --secondary-border: hsl(var(--secondary));
-  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --muted-border: hsl(var(--muted));
-  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --accent-border: hsl(var(--accent));
-  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --destructive-border: hsl(var(--destructive));
-  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
 .dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
+  --button-outline: rgba(255, 255, 255, .10);
+  --badge-outline: rgba(255, 255, 255, .05);
 
-  --opaque-button-border-intensity: 9;  /* In terms of percentages */
+  --opaque-button-border-intensity: 9;
+  /* In terms of percentages */
 
   /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --elevate-1: rgba(255, 255, 255, .04);
+  --elevate-2: rgba(255, 255, 255, .09);
 
   --background: 220 8% 8%;
 
@@ -346,4 +307,31 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+}
+
+/* Animated decorative blobs used in hero backgrounds */
+@keyframes blob {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+
+  33% {
+    transform: translateY(-12px) scale(1.05);
+  }
+
+  66% {
+    transform: translateY(6px) scale(0.95);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 8s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
 }
