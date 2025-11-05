@@ -57,16 +57,15 @@ export default function CommunityEventsSection() {
     return (
         <section className="py-16 sm:py-20 md:py-24 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                <div className="text-center lg:text-left mb-12 sm:mb-16">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 inline-flex flex-col gap-2">
-                        <span>Events &</span>
-                        <span className="">Highlights</span>
+                <div className="text-center mb-12 sm:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+                        Events & Highlights
                     </h2>
-                    <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+                    <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
                         We host events that connect and inspire, from AI workshops to panel discussions, 
                         webinars, hackathons, and innovation challenges across Africa.
                     </p>
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <div className="flex justify-center">
                         <Button 
                             variant="outline" 
                             size="lg"

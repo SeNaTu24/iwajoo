@@ -67,12 +67,11 @@ export default function ProgramsSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
                 <div className="text-center mb-12 sm:mb-16">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-                        Choose Your Track
+                        Volunteer with us
                     </h2>
                     <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
-                        Explore our specialized communities and find the perfect
-                        track to accelerate your AI journey and connect with
-                        like-minded professionals.
+                        Join our volunteer programs designed to build AI expertise,
+                        foster innovation, and create lasting impact across Africa.
                     </p>
                 </div>
 
@@ -84,18 +83,10 @@ export default function ProgramsSection() {
                             data-testid={`card-track-${i}`}
                         >
                             <CardHeader className="gap-1 space-y-0 pb-2">
-                                <div className="flex items-center justify-between gap-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-2 rounded-md bg-primary/10">
-                                            <track.icon className="h-5 w-5 text-primary" />
-                                        </div>
+                                <div className="flex items-center gap-3">
+                                    <div className="p-2 rounded-md bg-primary/10">
+                                        <track.icon className="h-5 w-5 text-primary" />
                                     </div>
-                                    <Badge
-                                        variant="secondary"
-                                        data-testid={`badge-members-${i}`}
-                                    >
-                                        {track.members} members
-                                    </Badge>
                                 </div>
                                 <CardTitle className="text-xl mt-3">
                                     {track.name}

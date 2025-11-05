@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -10,21 +9,25 @@ export default function Header() {
         { label: "Our Vision", href: "#about" },
         { label: "Programs", href: "#initiatives" },
         { label: "Impact", href: "#gallery" },
-        { label: "Opportunities", href: "#careers" },
         { label: "Resources", href: "#resources" },
+        { label: "Blog", href: "/blog" },
         { label: "Join Us", href: "#contact" },
     ];
 
-    const scrollToSection = (href: string) => {
-        const id = href.replace("#", "");
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const handleNavigation = (href: string) => {
+        if (href.startsWith("#")) {
+            const id = href.replace("#", "");
+            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        } else {
+            window.location.href = href;
+        }
         setMobileMenuOpen(false);
     };
 
     return (
         <header className="fixed inset-x-0 top-0 z-50">
             <div
-                className="absolute inset-0 bg-background/80 backdrop-blur-md border-b border-border"
+                className="absolute inset-0 bg-background/95 backdrop-blur-md border-b border-border"
                 aria-hidden
             />
 
@@ -51,7 +54,7 @@ export default function Header() {
                         {navLinks.map((link, i) => (
                             <button
                                 key={i}
-                                onClick={() => scrollToSection(link.href)}
+                                onClick={() => handleNavigation(link.href)}
                                 className="text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary/60 px-2 py-1 rounded"
                                 data-testid={`nav-${link.label
                                     .toLowerCase()
@@ -63,8 +66,6 @@ export default function Header() {
                     </nav>
 
                     <div className="flex items-center gap-3">
-                        <ThemeToggle />
-
                         <Button
                             className="hidden md:inline-flex bg-primary text-primary-foreground hover:opacity-95 px-4 py-2 rounded-md shadow-sm"
                             data-testid="button-header-join"
@@ -97,7 +98,7 @@ export default function Header() {
                             {navLinks.map((link, i) => (
                                 <button
                                     key={i}
-                                    onClick={() => scrollToSection(link.href)}
+                                    onClick={() => handleNavigation(link.href)}
                                     className="text-base text-muted-foreground hover:text-foreground transition-colors text-left px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50"
                                 >
                                     {link.label}

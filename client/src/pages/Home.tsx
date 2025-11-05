@@ -3,10 +3,10 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProgramsSection from "@/components/ProgramsSection";
 import CommunityEventsSection from "@/components/CommunityEventsSection";
-import OpportunitiesSection from "@/components/OpportunitiesSection";
+// import OpportunitiesSection from "@/components/OpportunitiesSection";
 import ImpactSection from "@/components/ImpactSection";
 import ResourcesSection from "@/components/ResourcesSection";
-
+import NewsletterSection from "@/components/NewsletterSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
@@ -27,12 +27,13 @@ export default function Home() {
                 <div id="gallery">
                     <ImpactSection />
                 </div>
-                <div id="careers">
+                {/* <div id="careers">
                     <OpportunitiesSection />
-                </div>
+                </div> */}
                 <div id="resources">
                     <ResourcesSection />
                 </div>
+                <NewsletterSection />
                 <div id="contact">
                     <ContactSection />
                 </div>

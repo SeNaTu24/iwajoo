@@ -22,35 +22,44 @@ export default function Footer() {
                         <h4 className="font-semibold mb-4">Quick Links</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>
-                                <a
-                                    href="#about"
-                                    className="hover:text-foreground transition-colors"
+                                <button
+                                    onClick={() => {
+                                        if (window.location.pathname !== '/') window.location.href = '/';
+                                        setTimeout(() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                                    }}
+                                    className="hover:text-foreground transition-colors text-left"
                                 >
                                     Our Vision
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a
-                                    href="#initiatives"
-                                    className="hover:text-foreground transition-colors"
+                                <button
+                                    onClick={() => {
+                                        if (window.location.pathname !== '/') window.location.href = '/';
+                                        setTimeout(() => document.getElementById('initiatives')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                                    }}
+                                    className="hover:text-foreground transition-colors text-left"
                                 >
                                     Programs
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a
-                                    href="#gallery"
-                                    className="hover:text-foreground transition-colors"
+                                <button
+                                    onClick={() => {
+                                        if (window.location.pathname !== '/') window.location.href = '/';
+                                        setTimeout(() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                                    }}
+                                    className="hover:text-foreground transition-colors text-left"
                                 >
                                     Impact
-                                </a>
+                                </button>
                             </li>
                             <li>
                                 <a
-                                    href="#careers"
+                                    href="/blog"
                                     className="hover:text-foreground transition-colors"
                                 >
-                                    Opportunities
+                                    Blog
                                 </a>
                             </li>
                         </ul>
@@ -60,36 +69,44 @@ export default function Footer() {
                         <h4 className="font-semibold mb-4">Resources</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>
-                                <a
-                                    href="#resources"
-                                    className="hover:text-foreground transition-colors"
+                                <button
+                                    onClick={() => {
+                                        if (window.location.pathname !== '/') window.location.href = '/';
+                                        setTimeout(() => document.getElementById('resources')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                                    }}
+                                    className="hover:text-foreground transition-colors text-left"
                                 >
                                     Learning Materials
-                                </a>
+                                </button>
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="https://github.com/SeNaTu24/iwajoo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="hover:text-foreground transition-colors"
                                 >
-                                    Community Guidelines
+                                    GitHub
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="/blog"
                                     className="hover:text-foreground transition-colors"
                                 >
-                                    Research Papers
+                                    Blog & Research
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="#contact"
-                                    className="hover:text-foreground transition-colors"
+                                <button
+                                    onClick={() => {
+                                        if (window.location.pathname !== '/') window.location.href = '/';
+                                        setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                                    }}
+                                    className="hover:text-foreground transition-colors text-left"
                                 >
                                     Contact Us
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -99,26 +116,32 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>
                                 <a
-                                    href="#"
+                                    href="https://twitter.com/iwajoo_ai"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="hover:text-foreground transition-colors"
                                 >
-                                    Local Chapters
+                                    Twitter
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="https://linkedin.com/company/iwajoo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-foreground transition-colors"
+                                >
+                                    LinkedIn
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://iwajoo.substack.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="hover:text-foreground transition-colors"
                                 >
                                     Newsletter
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-foreground transition-colors"
-                                >
-                                    Social Media
                                 </a>
                             </li>
                         </ul>
