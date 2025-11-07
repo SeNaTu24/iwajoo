@@ -7,32 +7,19 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Calendar, Clock, Video } from "lucide-react";
+
+import { Calendar, Clock } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 
 const upcomingEvents = [
     {
-        topic: "AI for All - Introducing AI literacy to African classrooms",
-        participants: ["Dr. Amina Kone", "Prof. Kwame Asante"],
-        date: "Dec 15, 2024",
-        time: "3:00 PM WAT",
+        topic: "Making a Case for Local Language Models in Africa",
+        participants: ["iwájóó Team", "AI Researchers"],
+        date: "Nov 19, 2024",
+        time: "2:00 PM - 4:00 PM GMT+1",
         category: "Workshop",
-    },
-    {
-        topic: "Lagos AI Week - A gathering of AI innovators and startups",
-        participants: ["Tech Leaders", "Startup Founders"],
-        date: "Jan 20-22, 2025",
-        time: "9:00 AM WAT",
-        category: "Conference",
-    },
-    {
-        topic: "African AI Hackathon - Building solutions for local challenges",
-        participants: ["Developers", "Designers"],
-        date: "Feb 10, 2025",
-        time: "10:00 AM WAT",
-        category: "Hackathon",
+        link: "https://bit.ly/4onaMPL"
     },
 ];
 
@@ -40,19 +27,17 @@ const pastEvents = [
     {
         topic: "AI Ethics in African Context - Webinar Series",
         participants: ["Dr. Fatima Okonkwo", "Prof. Mandla Ndaba"],
-        views: "3.2K",
         category: "Webinar",
     },
     {
         topic: "Nairobi Tech Summit - AI Panel Discussion",
         participants: ["Industry Leaders", "Researchers"],
-        views: "2.8K",
         category: "Panel",
     },
 ];
 
 export default function CommunityEventsSection() {
-    const [activeTab, setActiveTab] = useState("upcoming");
+    const [activeTab, setActiveTab] = useState("all");
 
     return (
         <section className="py-16 sm:py-20 md:py-24 relative">
@@ -65,18 +50,24 @@ export default function CommunityEventsSection() {
                         We host events that connect and inspire, from AI workshops to panel discussions, 
                         webinars, hackathons, and innovation challenges across Africa.
                     </p>
-                    <div className="flex justify-center">
-                        <Button 
-                            variant="outline" 
-                            size="lg"
-                            onClick={() => setActiveTab("all")}
-                        >
-                            View All Events
-                        </Button>
-                    </div>
                 </div>
 
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                    <TabsList className="grid w-full max-w-md sm:max-w-lg mx-auto grid-cols-3 mb-8 sm:mb-12">
+                        <TabsTrigger value="all" data-testid="tab-all">
+                            All Events
+                        </TabsTrigger>
+                        <TabsTrigger
+                            value="upcoming"
+                            data-testid="tab-upcoming"
+                        >
+                            Upcoming
+                        </TabsTrigger>
+                        <TabsTrigger value="past" data-testid="tab-past">
+                            Past Events
+                        </TabsTrigger>
+                    </TabsList>
+
                     <TabsContent value="all" className="space-y-8">
                         <div className="space-y-8">
                             <div>
@@ -93,20 +84,6 @@ export default function CommunityEventsSection() {
                                                 </CardTitle>
                                             </CardHeader>
                                             <CardContent className="space-y-4">
-                                                <div className="flex items-center gap-2">
-                                                    {event.participants.map((name, idx) => (
-                                                        <div key={idx} className="flex items-center gap-2">
-                                                            <Avatar className="h-8 w-8">
-                                                                <AvatarFallback className="text-xs">
-                                                                    {name.split(" ").map((n) => n[0]).join("")}
-                                                                </AvatarFallback>
-                                                            </Avatar>
-                                                            {idx < event.participants.length - 1 && (
-                                                                <span className="text-xs text-muted-foreground">+</span>
-                                                            )}
-                                                        </div>
-                                                    ))}
-                                                </div>
                                                 <div className="space-y-2 text-sm text-muted-foreground">
                                                     <div className="flex items-center gap-2">
                                                         <Calendar className="h-4 w-4" />
@@ -119,7 +96,10 @@ export default function CommunityEventsSection() {
                                                 </div>
                                             </CardContent>
                                             <CardFooter>
-                                                <Button className="w-full">
+                                                <Button 
+                                                    className="w-full"
+                                                    onClick={() => event.link && window.open(event.link, '_blank')}
+                                                >
                                                     Register Now
                                                 </Button>
                                             </CardFooter>
@@ -141,24 +121,6 @@ export default function CommunityEventsSection() {
                                                 </CardTitle>
                                             </CardHeader>
                                             <CardContent className="space-y-4">
-                                                <div className="flex items-center gap-2">
-                                                    {event.participants.map((name, idx) => (
-                                                        <div key={idx} className="flex items-center gap-2">
-                                                            <Avatar className="h-8 w-8">
-                                                                <AvatarFallback className="text-xs">
-                                                                    {name.split(" ").map((n) => n[0]).join("")}
-                                                                </AvatarFallback>
-                                                            </Avatar>
-                                                            {idx < event.participants.length - 1 && (
-                                                                <span className="text-xs text-muted-foreground">+</span>
-                                                            )}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                                    <Video className="h-4 w-4" />
-                                                    {event.views} views
-                                                </div>
                                             </CardContent>
                                             <CardFooter>
                                                 <Button variant="outline" className="w-full">
@@ -171,20 +133,6 @@ export default function CommunityEventsSection() {
                                 </div>
                         </div>
                     </TabsContent>
-                    <TabsList className="grid w-full max-w-md sm:max-w-lg mx-auto grid-cols-3 mb-8 sm:mb-12">
-                        <TabsTrigger value="all" data-testid="tab-all">
-                            All Events
-                        </TabsTrigger>
-                        <TabsTrigger
-                            value="upcoming"
-                            data-testid="tab-upcoming"
-                        >
-                            Upcoming
-                        </TabsTrigger>
-                        <TabsTrigger value="past" data-testid="tab-past">
-                            Past Events
-                        </TabsTrigger>
-                    </TabsList>
 
                     <TabsContent value="upcoming" className="transition-all duration-300">
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -206,33 +154,6 @@ export default function CommunityEventsSection() {
                                         </CardTitle>
                                     </CardHeader>
                                     <CardContent className="space-y-4">
-                                        <div className="flex items-center gap-2">
-                                            {event.participants.map(
-                                                (name, idx) => (
-                                                    <div
-                                                        key={idx}
-                                                        className="flex items-center gap-2"
-                                                    >
-                                                        <Avatar className="h-8 w-8">
-                                                            <AvatarFallback className="text-xs">
-                                                                {name
-                                                                    .split(" ")
-                                                                    .map(
-                                                                        (n) =>
-                                                                            n[0]
-                                                                    )
-                                                                    .join("")}
-                                                            </AvatarFallback>
-                                                        </Avatar>
-                                                        {idx < event.participants.length - 1 && (
-                                                            <span className="text-xs text-muted-foreground">
-                                                                +
-                                                            </span>
-                                                        )}
-                                                    </div>
-                                                )
-                                            )}
-                                        </div>
                                         <div className="space-y-2 text-sm text-muted-foreground">
                                             <div className="flex items-center gap-2">
                                                 <Calendar className="h-4 w-4" />
@@ -248,6 +169,7 @@ export default function CommunityEventsSection() {
                                         <Button
                                             className="w-full"
                                             data-testid={`button-register-${i}`}
+                                            onClick={() => event.link && window.open(event.link, '_blank')}
                                         >
                                             Register Now
                                         </Button>
@@ -277,37 +199,6 @@ export default function CommunityEventsSection() {
                                         </CardTitle>
                                     </CardHeader>
                                     <CardContent className="space-y-4">
-                                        <div className="flex items-center gap-2">
-                                            {event.participants.map(
-                                                (name, idx) => (
-                                                    <div
-                                                        key={idx}
-                                                        className="flex items-center gap-2"
-                                                    >
-                                                        <Avatar className="h-8 w-8">
-                                                            <AvatarFallback className="text-xs">
-                                                                {name
-                                                                    .split(" ")
-                                                                    .map(
-                                                                        (n) =>
-                                                                            n[0]
-                                                                    )
-                                                                    .join("")}
-                                                            </AvatarFallback>
-                                                        </Avatar>
-                                                        {idx < event.participants.length - 1 && (
-                                                            <span className="text-xs text-muted-foreground">
-                                                                +
-                                                            </span>
-                                                        )}
-                                                    </div>
-                                                )
-                                            )}
-                                        </div>
-                                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                            <Video className="h-4 w-4" />
-                                            {event.views} views
-                                        </div>
                                     </CardContent>
                                     <CardFooter>
                                         <Button

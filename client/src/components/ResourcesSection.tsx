@@ -6,7 +6,7 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Newspaper, Wrench, BookOpen, ExternalLink, Rss, Users } from "lucide-react";
+import { Newspaper, Wrench, BookOpen, ExternalLink, Rss } from "lucide-react";
 
 const resources = [
     {
@@ -18,7 +18,7 @@ const resources = [
     },
     {
         icon: Rss,
-        title: "Iwajoo Insights",
+        title: "iwájóó Insights",
         description: "Our latest thoughts, analysis, and perspectives on AI in Africa.",
         link: "https://substack.com/@iwajoo",
         external: true
@@ -36,20 +36,6 @@ const resources = [
         description: "Courses, tutorials, and guides for AI education and skill development.",
         link: "https://www.coursera.org/browse/data-science/machine-learning",
         external: true
-    },
-    {
-        icon: ExternalLink,
-        title: "Tech News Africa",
-        description: "African tech ecosystem news, startup stories, and innovation updates.",
-        link: "https://techcabal.com/",
-        external: true
-    },
-    {
-        icon: Users,
-        title: "Community Forum",
-        description: "Connect with fellow AI advocates, share ideas, and collaborate on projects.",
-        link: "#contact",
-        external: false
     },
 ];
 

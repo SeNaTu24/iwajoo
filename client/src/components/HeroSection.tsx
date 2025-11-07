@@ -85,7 +85,7 @@ export default function HeroSection() {
             <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 pt-24 sm:pt-32 md:pt-40">
                 <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
                     <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-4 sm:mb-6 text-white">
-                        Iwajoo
+                        iwájóó
                         <br />
                         <span 
                             className={`bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent font-bold drop-shadow-lg transition-all duration-500 transform text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl ${
@@ -118,16 +118,6 @@ export default function HeroSection() {
                             aria-label="Join the movement"
                         >
                             Join the Movement
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            data-testid="button-learn-more"
-                            className="border-2 border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-                            onClick={scrollToAbout}
-                            aria-label="Learn more about Iwajoo"
-                        >
-                            Learn More
                         </Button>
                     </div>
 

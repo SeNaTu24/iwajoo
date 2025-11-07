@@ -71,7 +71,7 @@ export default function ContactSection() {
                                         {
                                             icon: SiInstagram,
                                             label: "Instagram",
-                                            href: "https://www.instagram.com/iwajoo/",
+                                            href: "https://www.instagram.com/iwajoo_/",
                                         },
                                         {
                                             icon: SiSubstack,

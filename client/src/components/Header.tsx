@@ -16,8 +16,12 @@ export default function Header() {
 
     const handleNavigation = (href: string) => {
         if (href.startsWith("#")) {
-            const id = href.replace("#", "");
-            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+            if (window.location.pathname !== '/') {
+                window.location.href = '/' + href;
+            } else {
+                const id = href.replace("#", "");
+                document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+            }
         } else {
             window.location.href = href;
         }
@@ -37,11 +41,11 @@ export default function Header() {
                         <a
                             href="/"
                             className="flex items-center"
-                            aria-label="Iwajoo home"
+                            aria-label="iwájóó home"
                         >
                             <img
                                 src="/iwajoo_logo.png"
-                                alt="Iwajoo logo"
+                                alt="iwájóó logo"
                                 className="h-8 md:h-10 w-auto object-contain shadow-sm"
                             />
                         </a>

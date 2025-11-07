@@ -62,7 +62,7 @@ export default function Blog() {
                     <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent" />
                     <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
                         <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-                            Iwajoo Blog
+                            iwájóó Blog
                         </h1>
                         <p className="text-lg text-white/90 max-w-2xl mx-auto">
                             Insights, stories, and updates from Africa's AI community. 

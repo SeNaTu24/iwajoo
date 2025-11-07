@@ -7,10 +7,10 @@ export default function AboutSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
                 <div className="text-center mb-12 sm:mb-16">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-                        About <span className="text-primary">Iwajoo</span>
+                        About <span className="text-primary">iwájóó</span>
                     </h2>
                     <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-                        Iwajoo is a non-profit dedicated to advancing AI
+                        iwájóó is a non-profit dedicated to advancing AI
                         education and advocacy across Africa. We believe every
                         African deserves access to the knowledge and
                         opportunities that AI offers.
@@ -25,7 +25,7 @@ export default function AboutSection() {
                         <p className="text-muted-foreground leading-relaxed">
                             To make AI learning and innovation accessible to
                             every African, fostering communities that build,
-                            create, and shape Africa’s place in the global AI
+                            create, and shape Africa's place in the global AI
                             landscape.
                         </p>
                     </Card>
@@ -55,7 +55,7 @@ export default function AboutSection() {
                             icon: Target,
                             title: "Research & Development",
                             description:
-                                "Iwajoo supports African-led research that explores how AI can solve local challenges.",
+                                "iwájóó supports African-led research that explores how AI can solve local challenges.",
                         },
                         {
                             icon: Eye,

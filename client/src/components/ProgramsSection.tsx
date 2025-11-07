@@ -18,46 +18,46 @@ import {
 
 const tracks = [
     {
-        icon: Scale,
-        name: "AI Ethics & Advocacy",
-        description:
-            "Champion responsible AI development that respects African values and needs.",
-        members: 450,
-    },
-    {
         icon: Brain,
-        name: "African AI Solutions",
+        name: "Machine Learning Engineer",
         description:
-            "Build AI applications that solve unique challenges across the continent.",
-        members: 480,
-    },
-    {
-        icon: Shield,
-        name: "Local Language AI",
-        description:
-            "Develop and promote AI systems for African languages and cultural context.",
-        members: 320,
+            "Build and deploy ML models for African healthcare, agriculture, and fintech. Contribute to 3+ production models in 6 months.",
+        cta: "Volunteer",
     },
     {
         icon: Cpu,
-        name: "Innovation Hub",
+        name: "Data Scientist",
         description:
-            "Create next-gen AI solutions with African talent and perspective.",
-        members: 520,
+            "Analyze African datasets to uncover insights for policy and business decisions. Lead 2+ data projects quarterly.",
+        cta: "Volunteer",
+    },
+    {
+        icon: Shield,
+        name: "Language AI Developer",
+        description:
+            "Create NLP models for Swahili, Yoruba, Amharic and other African languages. Ship 1+ language model per quarter.",
+        cta: "Volunteer",
+    },
+    {
+        icon: Scale,
+        name: "AI Policy Advocate",
+        description:
+            "Shape AI regulations with African governments and institutions. Influence 2+ policy documents annually.",
+        cta: "Volunteer",
     },
     {
         icon: Sparkles,
-        name: "Community Leadership",
+        name: "AI Community Builder",
         description:
-            "Train AI advocates and build strong local tech communities.",
-        members: 600,
+            "Organize local AI meetups, workshops, and hackathons across Africa.",
+        cta: "Volunteer",
     },
     {
         icon: MessageSquare,
-        name: "Policy & Impact",
+        name: "AI Research Contributor",
         description:
-            "Shape AI policies that empower African nations in the global tech landscape.",
-        members: 380,
+            "Contribute to cutting-edge AI research papers focused on African contexts. Co-author 1+ publication annually.",
+        cta: "Volunteer",
     },
 ];
 
@@ -103,7 +103,7 @@ export default function ProgramsSection() {
                                     variant="outline"
                                     data-testid={`button-join-track-${i}`}
                                 >
-                                    Join Track
+                                    Volunteer
                                 </Button>
                             </CardFooter>
                         </Card>

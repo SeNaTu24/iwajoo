@@ -24,9 +24,9 @@ export default function Home() {
                     <ProgramsSection />
                     <CommunityEventsSection />
                 </div>
-                <div id="gallery">
+                {/* <div id="gallery">
                     <ImpactSection />
-                </div>
+                </div> */}
                 {/* <div id="careers">
                     <OpportunitiesSection />
                 </div> */}
