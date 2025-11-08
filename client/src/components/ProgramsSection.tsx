@@ -33,9 +33,9 @@ const tracks = [
     },
     {
         icon: Shield,
-        name: "Language AI Developer",
+        name: "Large Language Model Engineer",
         description:
-            "Create NLP models for Swahili, Yoruba, Amharic and other African languages. Ship 1+ language model per quarter.",
+            "Fine-tune and deploy Large Language Models for African languages and contexts. Build multilingual chatbots, translation systems, and AI assistants for local use cases.",
         cta: "Volunteer",
     },
     {
