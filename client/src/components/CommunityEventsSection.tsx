@@ -23,18 +23,7 @@ const upcomingEvents = [
     },
 ];
 
-const pastEvents = [
-    {
-        topic: "AI Ethics in African Context - Webinar Series",
-        participants: ["Dr. Fatima Okonkwo", "Prof. Mandla Ndaba"],
-        category: "Webinar",
-    },
-    {
-        topic: "Nairobi Tech Summit - AI Panel Discussion",
-        participants: ["Industry Leaders", "Researchers"],
-        category: "Panel",
-    },
-];
+const pastEvents = [];
 
 export default function CommunityEventsSection() {
     const [activeTab, setActiveTab] = useState("all");
@@ -107,30 +96,32 @@ export default function CommunityEventsSection() {
                                     ))}
                                 </div>
                             </div>
-                            <div>
-                                <h3 className="text-2xl font-semibold mb-6 text-primary">Past Events</h3>
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    {pastEvents.map((event, i) => (
-                                        <Card key={`past-${i}`} className="hover-elevate transition-all duration-300">
-                                            <CardHeader className="gap-1 space-y-0">
-                                                <Badge className="w-fit mb-3" variant="secondary">
-                                                    {event.category}
-                                                </Badge>
-                                                <CardTitle className="text-lg">
-                                                    {event.topic}
-                                                </CardTitle>
-                                            </CardHeader>
-                                            <CardContent className="space-y-4">
-                                            </CardContent>
-                                            <CardFooter>
-                                                <Button variant="outline" className="w-full">
-                                                    Watch Highlights
-                                                </Button>
-                                            </CardFooter>
-                                        </Card>
-                                    ))}
+                            {pastEvents.length > 0 && (
+                                <div>
+                                    <h3 className="text-2xl font-semibold mb-6 text-primary">Past Events</h3>
+                                    <div className="grid md:grid-cols-2 gap-6">
+                                        {pastEvents.map((event, i) => (
+                                            <Card key={`past-${i}`} className="hover-elevate transition-all duration-300">
+                                                <CardHeader className="gap-1 space-y-0">
+                                                    <Badge className="w-fit mb-3" variant="secondary">
+                                                        {event.category}
+                                                    </Badge>
+                                                    <CardTitle className="text-lg">
+                                                        {event.topic}
+                                                    </CardTitle>
+                                                </CardHeader>
+                                                <CardContent className="space-y-4">
+                                                </CardContent>
+                                                <CardFooter>
+                                                    <Button variant="outline" className="w-full">
+                                                        Watch Highlights
+                                                    </Button>
+                                                </CardFooter>
+                                            </Card>
+                                        ))}
+                                    </div>
                                 </div>
-                                </div>
+                            )}
                         </div>
                     </TabsContent>
 
@@ -180,38 +171,46 @@ export default function CommunityEventsSection() {
                     </TabsContent>
 
                     <TabsContent value="past" className="transition-all duration-300">
-                        <div className="grid md:grid-cols-2 gap-6">
-                            {pastEvents.map((event, i) => (
-                                <Card
-                                    key={i}
-                                    className="hover-elevate transition-all duration-300"
-                                    data-testid={`card-past-event-${i}`}
-                                >
-                                    <CardHeader className="gap-1 space-y-0">
-                                        <Badge
-                                            className="w-fit mb-3"
-                                            variant="secondary"
-                                        >
-                                            {event.category}
-                                        </Badge>
-                                        <CardTitle className="text-lg">
-                                            {event.topic}
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="space-y-4">
-                                    </CardContent>
-                                    <CardFooter>
-                                        <Button
-                                            variant="outline"
-                                            className="w-full"
-                                            data-testid={`button-watch-${i}`}
-                                        >
-                                            Watch Highlights
-                                        </Button>
-                                    </CardFooter>
-                                </Card>
-                            ))}
-                        </div>
+                        {pastEvents.length > 0 ? (
+                            <div className="grid md:grid-cols-2 gap-6">
+                                {pastEvents.map((event, i) => (
+                                    <Card
+                                        key={i}
+                                        className="hover-elevate transition-all duration-300"
+                                        data-testid={`card-past-event-${i}`}
+                                    >
+                                        <CardHeader className="gap-1 space-y-0">
+                                            <Badge
+                                                className="w-fit mb-3"
+                                                variant="secondary"
+                                            >
+                                                {event.category}
+                                            </Badge>
+                                            <CardTitle className="text-lg">
+                                                {event.topic}
+                                            </CardTitle>
+                                        </CardHeader>
+                                        <CardContent className="space-y-4">
+                                        </CardContent>
+                                        <CardFooter>
+                                            <Button
+                                                variant="outline"
+                                                className="w-full"
+                                                data-testid={`button-watch-${i}`}
+                                            >
+                                                Watch Highlights
+                                            </Button>
+                                        </CardFooter>
+                                    </Card>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="text-center py-12">
+                                <p className="text-muted-foreground text-lg">
+                                    No past events to display yet. Check back soon!
+                                </p>
+                            </div>
+                        )}
                     </TabsContent>
                 </Tabs>
             </div>
