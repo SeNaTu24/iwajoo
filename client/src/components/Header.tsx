@@ -73,6 +73,7 @@ export default function Header() {
                         <Button
                             className="hidden md:inline-flex bg-primary text-primary-foreground hover:opacity-95 px-4 py-2 rounded-md shadow-sm"
                             data-testid="button-header-join"
+                            onClick={() => window.open('https://forms.gle/fA6qCkFGbhPAVcE29', '_blank')}
                         >
                             Join Community
                         </Button>
@@ -109,7 +110,10 @@ export default function Header() {
                                 </button>
                             ))}
 
-                            <Button className="w-full mt-2 bg-primary text-primary-foreground">
+                            <Button 
+                                className="w-full mt-2 bg-primary text-primary-foreground"
+                                onClick={() => window.open('https://forms.gle/fA6qCkFGbhPAVcE29', '_blank')}
+                            >
                                 Join Community
                             </Button>
                         </nav>

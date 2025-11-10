@@ -102,6 +102,7 @@ export default function ProgramsSection() {
                                     className="w-full"
                                     variant="outline"
                                     data-testid={`button-join-track-${i}`}
+                                    onClick={() => window.open('https://forms.gle/fA6qCkFGbhPAVcE29', '_blank')}
                                 >
                                     Volunteer
                                 </Button>
