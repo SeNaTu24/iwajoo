@@ -35,7 +35,7 @@ export default function Header() {
                 aria-hidden
             />
 
-            <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center gap-4">
                         <a
@@ -73,7 +73,7 @@ export default function Header() {
                         <Button
                             className="hidden md:inline-flex bg-primary text-primary-foreground hover:opacity-95 px-4 py-2 rounded-md shadow-sm"
                             data-testid="button-header-join"
-                            onClick={() => window.open('https://forms.gle/fA6qCkFGbhPAVcE29', '_blank')}
+                            onClick={() => window.open('https://forms.gle/HM9e44ScizriTFoRA', '_blank')}
                         >
                             Join Community
                         </Button>
@@ -99,7 +99,7 @@ export default function Header() {
                         id="mobile-menu"
                         className="md:hidden mt-3 border-t border-border py-4"
                     >
-                        <nav className="flex flex-col gap-3">
+                        <nav className="flex flex-col gap-3 px-2">
                             {navLinks.map((link, i) => (
                                 <button
                                     key={i}
@@ -112,7 +112,7 @@ export default function Header() {
 
                             <Button 
                                 className="w-full mt-2 bg-primary text-primary-foreground"
-                                onClick={() => window.open('https://forms.gle/fA6qCkFGbhPAVcE29', '_blank')}
+                                onClick={() => window.open('https://forms.gle/HM9e44ScizriTFoRA', '_blank')}
                             >
                                 Join Community
                             </Button>

@@ -116,7 +116,7 @@ export default function HeroSection() {
                             data-testid="button-join-movement"
                             className="border-2 border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                             aria-label="Join the movement"
-                            onClick={() => window.open('https://forms.gle/fA6qCkFGbhPAVcE29', '_blank')}
+                            onClick={() => window.open('https://forms.gle/HM9e44ScizriTFoRA', '_blank')}
                         >
                             Join the Movement
                         </Button>

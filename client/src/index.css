@@ -194,6 +194,17 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  /* Prevent mobile bleeding */
+  html {
+    overflow-x: hidden;
+  }
+
+  /* Ensure all containers respect viewport width */
+  * {
+    box-sizing: border-box;
   }
 }
 
