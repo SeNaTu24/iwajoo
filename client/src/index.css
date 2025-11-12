@@ -222,6 +222,14 @@
   .grid > * {
     min-width: 0;
   }
+
+  /* Hide text area in background image on mobile */
+  @media (max-width: 640px) {
+    .hero-bg {
+      background-position: 70% center !important;
+      transform: scale(1.2) !important;
+    }
+  }
 }
 
 /**

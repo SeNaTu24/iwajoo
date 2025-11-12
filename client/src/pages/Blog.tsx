@@ -52,9 +52,11 @@ export default function Blog() {
                 {/* Hero Section */}
                 <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
                     <div
-                        className="absolute inset-0 z-0 bg-cover bg-center sm:bg-right-top"
+                        className="absolute inset-0 z-0 hero-bg"
                         style={{
                             backgroundImage: "url('/iwajoo1.png')",
+                            backgroundSize: "cover",
+                            backgroundPosition: "center right",
                         }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent" />

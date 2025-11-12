@@ -68,10 +68,11 @@ export default function HeroSection() {
             <div
                 ref={parallaxRef}
                 aria-hidden
-                className="absolute inset-0 z-0"
-                className="bg-cover bg-center sm:bg-right-top"
+                className="absolute inset-0 z-0 hero-bg"
                 style={{
                     backgroundImage: "url('/iwajoo1.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center right",
                     willChange: "transform",
                     transform: "translateZ(0) scale(1.03)",
                 }}
