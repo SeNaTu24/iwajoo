@@ -167,7 +167,7 @@ export default function BlogPost() {
             <div className="min-h-screen">
                 <Header />
                 <main className="pt-16 py-20">
-                    <div className="max-w-4xl mx-auto px-4 text-center">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center overflow-hidden">
                         <h1 className="text-2xl font-bold mb-4">Article Not Found</h1>
                         <Button onClick={() => window.location.href = '/blog'}>
                             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -184,7 +184,7 @@ export default function BlogPost() {
         <div className="min-h-screen">
             <Header />
             <main className="pt-16">
-                <article className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-12">
+                <article className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-12 overflow-hidden">
                     <Button 
                         variant="ghost" 
                         onClick={() => window.location.href = '/blog'}
@@ -221,7 +221,7 @@ export default function BlogPost() {
                     </div>
 
                     <div 
-                        className="prose prose-lg max-w-none"
+                        className="prose prose-lg max-w-none overflow-hidden break-words"
                         dangerouslySetInnerHTML={{ __html: post.content }}
                     />
                 </article>

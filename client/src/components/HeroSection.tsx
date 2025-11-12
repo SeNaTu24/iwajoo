@@ -9,7 +9,7 @@ export default function HeroSection() {
     const [isVisible, setIsVisible] = useState(true);
 
     const rotatingTexts = [
-        "AI advocacy for all of Africa",
+        "Unleashing African AI potential",
         "Empowering African AI innovation",
         "Building local AI communities",
         "Shaping Africa's tech future",
@@ -69,10 +69,9 @@ export default function HeroSection() {
                 ref={parallaxRef}
                 aria-hidden
                 className="absolute inset-0 z-0"
+                className="bg-cover bg-center sm:bg-right-top"
                 style={{
                     backgroundImage: "url('/iwajoo1.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center right",
                     willChange: "transform",
                     transform: "translateZ(0) scale(1.03)",
                 }}

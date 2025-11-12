@@ -52,11 +52,9 @@ export default function Blog() {
                 {/* Hero Section */}
                 <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
                     <div
-                        className="absolute inset-0 z-0"
+                        className="absolute inset-0 z-0 bg-cover bg-center sm:bg-right-top"
                         style={{
                             backgroundImage: "url('/iwajoo1.png')",
-                            backgroundSize: "cover",
-                            backgroundPosition: "center right",
                         }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent" />
@@ -74,7 +72,7 @@ export default function Blog() {
                 {/* Featured Post */}
                 {featuredPost && (
                     <section className="py-12 bg-gray-50">
-                        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+                        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 overflow-hidden">
                             <h2 className="text-2xl font-bold mb-8">Featured Article</h2>
                             <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                 <div className="md:flex">
@@ -115,7 +113,7 @@ export default function Blog() {
 
                 {/* Categories */}
                 <section className="py-8 border-b">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 overflow-hidden">
                         <div className="flex flex-wrap gap-2">
                             {categories.map((category) => (
                                 <Button 
@@ -132,8 +130,8 @@ export default function Blog() {
 
                 {/* Blog Posts Grid */}
                 <section className="py-12">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 overflow-hidden">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                             {regularPosts.map((post) => (
                                 <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                     <img 

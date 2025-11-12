@@ -206,6 +206,22 @@
   * {
     box-sizing: border-box;
   }
+
+  /* Blog-specific mobile fixes */
+  .prose {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .prose img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Prevent cards from overflowing on mobile */
+  .grid > * {
+    min-width: 0;
+  }
 }
 
 /**
