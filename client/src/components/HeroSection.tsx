@@ -124,10 +124,10 @@ export default function HeroSection() {
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-4xl w-full px-2">
                         {[
-                            { value: "3K+", label: "Community Members" },
-                            { value: "120+", label: "Local Chapters" },
-                            { value: "500+", label: "Learning Hours" },
-                            { value: "200+", label: "Projects & Tools" },
+                            { value: "1K+", label: "Community Members" },
+                            { value: "3", label: "Regions" },
+                            { value: "10+", label: "Events" },
+                            { value: "5+", label: "Partners" },
                         ].map((stat, i) => (
                             <div
                                 key={i}
