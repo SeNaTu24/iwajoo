@@ -370,3 +370,14 @@
 .animation-delay-2000 {
   animation-delay: 2s;
 }
+
+.aspect-ratio-16-9 {
+  position: relative;
+  padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+}
+
+.aspect-ratio-16-9 .react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
